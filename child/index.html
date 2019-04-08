@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+  <meta charset="utf-8">
+  <title>RootScope</title>
+</head>
+<body ng-controller="FirstController">
+  <h1>{{nombre}}</h1>
+  <p><strong>Valor del padre: </strong>{{$parent.nombre}}</p>
+  <div ng-controller="ChildController">
+    <p><strong>Valor del hijo: </strong>{{nombre}}</p>
+    <div>
+      <label for="child">Nombre de Child:</label>
+      <input type="text" name="child" id="child" ng-model="nombre">
+    </div>
+  </div>
+  <div>
+    <label for="first">Nombre de First:</label>
+    <input type="text" name="first" id="first" ng-model="nombre">
+  </div>
+  <div>
+    <label for="parent">Nombre de Parent:</label>
+    <input type="text" name="parent" id="parent" ng-model="$parent.nombre">
+  </div>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script src="controller.js"></script>
+</body>
+</html>

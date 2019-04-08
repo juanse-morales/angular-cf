@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="MyFirstApp">
+<head>
+	<meta charset="utf-8">
+	<title>Http</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+</head>
+<body ng-controller="FirstController">
+	<input type="text" name="prueba" ng-model="newPost.title"><br>
+	<textarea ng-model="newPost.body"></textarea><br>
+	<button ng-click="addPost()">Enviar</button>
+	<h2>Lista</h2>
+	<ul>
+		<li ng-repeat="i in posts">
+			<h2>{{i.title}}</h2>
+			<h3>{{i.userId}}</h3>
+			<p>{{i.body}}</p>
+		</li>
+	</ul>
+</body>
+</html>

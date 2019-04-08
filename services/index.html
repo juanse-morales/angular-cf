@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+  <meta charset="utf-8">
+  <title>Services</title>
+</head>
+<body ng-controller="FirstController">
+  <h3>Lista</h3>
+  <ul>
+    <li ng-repeat="i in todo">
+      {{i.descripcion}} - 
+      {{i.fecha | date: 'short'}} - <a href="#" ng-click="removeAct(i)" style="color: red;">X</a>
+    </li>
+  </ul>
+  <form ng-submit="addAct()">
+    <input type="text" name="actividad" ng-model="newAct.descripcion"><br>
+    <input type="datetime-local" name="fecha" ng-model="newAct.fecha"><br>
+    <input type="submit" name="" value="Guardar">
+  </form>
+  <br>
+  <button ng-click="clean()">Limpiar</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script src="angular-local-storage.min.js"></script>
+<script src="controller.js"></script>
+</body>
+</html>
