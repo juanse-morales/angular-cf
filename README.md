@@ -1,4 +1,4 @@
 # angular-cf
-Curso de código facilito de Angular.js
+Curso de Angular.js
 
-Repositorio del curso que hice de Angular.Js en el canal de Youtube Código Facilito
+Repositorio del curso que hago de Angular.Js
